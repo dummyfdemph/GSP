@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Fedex GlobaLink - GSP NEWS </title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="css/style.css" rel="stylesheet" />
+
+
+</head>
+
+
+<body style="background-color: #eee;" id="demo">
+
+    <!-- <button onclick="myFunction()">Try it</button> 
+
+<p id="demo"></p>-->
+
+    <script>
+      function mouseonbody(){
+	$('#quickmenudv').css('display','none');
+	$('#mainmenudv').css('display','none');
+	}
+	
+	  function menu_mouseout() {
+	 $('#mainmenudv').css('display','block');
+	 
+	 if ($("#quickmenudv").hasClass("dropdown-content")) {
+		
+		$('#quickmenudv').css('display','none');
+		}
+	  
+	  }
+	
+	 function quicklink_mouseout() {
+	   $('#quickmenudv').css('display','block');
+	   if ($("#mainmenudv").hasClass("dropdown-content")) {
+		
+		$('#mainmenudv').css('display','none');
+		}
+	  }
+    </script>
+
+    <header>
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark indigo" style="border-radius: 0px !important;background-color:#4d148c !important;height: 43px;">
+
+            <div class="float-left">
+
+                <a class="navbar-brand"><img class="mainlogo" src="./images/fedex-logo-white.png"></a>
+
+            </div>
+             <div class="sepdv" id="seperator"> 
+			 </div>
+
+            <div class="collapse navbar-collapse" style="margin-left: 21px" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+
+                        <a class="nav-link topmenufsze " href="./Home.html">  
+<i class="fa fa-home moveicon" aria-hidden="true"></i>GSP Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown" style="padding-left: 3rem;
+    padding-right: 3rem;">
+                        <a class="nav-link dropdown-toggle topmenufsze dropbtn" href="#"
+						id="navbarDropdown" role="button" onmouseover="menu_mouseout()" 
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fas fa-bars moveicon"></i> Menu
+        </a>
+                        <div class="dropdown-menu dropdown-content " id="mainmenudv" style="line-height: 2.9rem" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " href="./clearance_v4.html">
+							<i class="fas fa-tags moveicon"></i>Clearance</a>
+                            <a class="dropdown-item" href="./operations_v4.html">
+							<i class="fas fa-tasks moveicon"></i>Operations</a>
+
+                            <a class="dropdown-item" href="./training_v4.html">
+							<i class='fas fa-envelope-open-text moveicon'></i>Training</a>
+                            <a class="dropdown-item" href="./marketing_v4.html">
+							<i class="fas fa-bullhorn moveicon"></i>Marketing/Sales</a>
+
+                            <a class="dropdown-item" href="customerexp_v4.html">
+							<i class="fas fa-user moveicon"></i>Customer Experience</a>
+
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle topmenufsze dropbtn" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onmouseover="quicklink_mouseout()">
+         <i class="fa fa-link moveicon" aria-hidden="true"></i> Quick Links
+        </a>
+                        <div class="dropdown-menu dropdown-content" id="quickmenudv" style="line-height: 2.9rem" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="https://www.fedex.com/">
+							<i class="fa fa-paper-plane moveicon" aria-hidden="true"></i>Fedex.com</a>
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/tnt.aspx">
+							<i class="fas fa-map moveicon"></i>TNT</a>
+
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/staff.aspx">
+							<i class="fas fa-users moveicon"></i>Staff</a>
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/regalerts.aspx">
+							<i class="fas fa-exclamation-triangle moveicon"></i>Reg Alerts</a>
+
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/apac.aspx">
+							<i class="fas fa-bullhorn moveicon" aria-hidden="true"></i>APAC</a>
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/meisa.aspx">
+							<i class="fa fa-life-ring moveicon" aria-hidden="true"></i>MEISA</a>
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/europe.aspx">
+							<i class="fas fa-atlas moveicon"></i>Europe</a>
+                            <a class="dropdown-item" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/lac.aspx">
+							<i class="fa fa-window-restore moveicon" aria-hidden="true"></i>LAC</a>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+  <form class="form-inline" id="empSearchForm" action="http://hr-directory.prod.fedex.com/PeopleDirectory" method="get">
+       <div class="input-group" style="width:100% !important;right: 75px;padding-left: 2rem;">
+	     
+		  <input type="hidden" name="goButton" value="Go">
+						 <input type="hidden" name="Button" value="Search">
+						 <input type="hidden" name="keyField" value="name">
+
+           <input type="text" style="height: 28px;border-radius: 2px;" id="empSearch" class="form-control" placeholder="Employee Lookup" name="Search" >
+            <div class="input-group-btn">
+                <button class="btn btn-default" style="line-height: 1;" type="submit">
+				<i class="glyphicon glyphicon-search"></i></button>
+            </div>
+		
+
+        </div>
+</form>
+        </nav>
+
+
+
+    </header>
+  
+  <main style=" height: auto;   margin-top: -7px" onmouseover="mouseonbody()"> 
+  
+   <div class="row"> 
+		    <div class="container" style="padding-left:0px !important;padding-right:0px;">
+  
+        <h3> GSP News </h3>
+		<span><p class="allpagetxt"> The latest GSP News issue – your global magazine on a bi-monthly is now also shared in PDF format.
+       </p> </span>
+		
+	   
+	    <ul style="line-height: 2.5">
+				    <li> <a href="" > CIAO</a></li>
+					<li> <a href="" > C4 Clearance Desktop</a></li>
+					<li> <a href="" > FBC IB</a></li>
+					<li> <a href="" > FGC</a></li>
+					<li> <a href="" >FLIGHT SEARCH</a></li>
+					
+					
+				 </ul>
+  </main>
+  
+    
+          </div>
+				  </div>
+				  
+ 
+
+  <!-- Footer -->
+  <footer class="page-footer font-small indigo mt-4 footer1" >
+	
+            <div class="row" >
+		<div style="padding-top:1rem;padding-left:8.8rem;width: 100%"> 
+		
+		     <div class="c-uhff-nav-group"> <a href="https://www.fedex.com/"><h4 style="color:#616161;font-weight: 700;margin-top: 2px;
+    margin-bottom: 0px;"> GSP home </h4></a> </div>
+		<div class="c-uhff-nav-group"> <h4 style="color:#616161;font-weight: 700;margin-top: 2px;
+    margin-bottom: 0px;"> Menu </h4> 
+		     <ul class="ulnone footermenuhight"> 
+			    <li><a class="footerlink" href="./clearance_v4.html">Clearance</a> </li>
+				 <li> <a  class="footerlink" href="./operations_v4.html"> Operations </a> </li>
+				  <li> <a class="footerlink" href="./training_v4.html">Training</a> </li>
+				   <li><a class="footerlink" href="./marketing_v4.html">Marketing/Sales</a> </li>
+				    <li><a class="footerlink" href="./customerexp_v4.html">Customer Experience </a></li>
+			</ul>
+		</div>
+		 <div class="c-uhff-nav-group"> <h4 style="color:#616161;font-weight: 600;margin-top: 0px;
+    margin-bottom: 0px;"> Quick links </h4>
+ <ul class="ulnone footermenuhight"> 
+			  <li><a class="footerlink" href="https://www.fedex.com/">FedEx.com </a></li>
+				 <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/tnt.aspx">TNT </a></li>
+				  <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/staff.aspx">Staff </a></li>
+				   <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/regalerts.aspx">REG alerts </a></li>
+				    <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/apac.aspx">APAC </a></li>
+					<li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/meisa.aspx">MEISA </a></li>
+				   <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/europe.aspx">Europe</a> </li>
+				    <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/lac.aspx"></a>LAC </li>
+			</ul>
+		 </div>
+		
+		</div>
+		</div>
+
+        <div class="row">
+        <div style="font-color:white !important;" class="c-uhff-base">© 2019 copyright:
+            <a> FedEx</a>
+        </div>
+        </div>
+
+    </footer>
+  <!-- Footer -->
+
+</body>
+
+</html>
