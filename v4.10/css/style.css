@@ -831,7 +831,7 @@ nav{width:100%;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active > a{border-top:none}
 #cssmenu > ul > li > form { padding-left: 0rem;margin-top: 9px; padding-bottom: 1rem;}
 #cssmenu > ul > li > form > div { right:0px !important;}
-
+.closeme { display:none !important};
 .sepdv {display:none;}
 .logo {top: -11px}
 .container { margin-right:10px;margin-left:10px; } 
@@ -839,7 +839,7 @@ nav{width:100%;}
 .pageimges { height:auto };
 
 
-.closeme { display:none !important};
+
 
 }
  
