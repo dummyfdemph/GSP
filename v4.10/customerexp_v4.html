@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Fedex GlobaLink - Customer Experience </title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="css/style.css" rel="stylesheet" />
+
+
+</head>
+
+
+<body style="background-color: #eee;" id="demo">
+
+    <!-- <button onclick="myFunction()">Try it</button> 
+
+<p id="demo"></p>-->
+
+    <script>
+        //document.getElementById("demo").innerHTML = "Width out: " + window.innerWidth + "<br>Height out: " + window.innerHeight;
+        function mouseonbody(){
+	$('#quickmenudv').css('display','none');
+	$('#mainmenudv').css('display','none');
+	}
+	
+	  function menu_mouseout() {
+	 $('#mainmenudv').css('display','block');
+	 
+	 if ($("#quickmenudv").hasClass("dropdown-content")) {
+		
+		$('#quickmenudv').css('display','none');
+		}
+	  
+	  }
+	
+	 function quicklink_mouseout() {
+	   $('#quickmenudv').css('display','block');
+	   if ($("#mainmenudv").hasClass("dropdown-content")) {
+		
+		$('#mainmenudv').css('display','none');
+		}
+	  }
+	  
+        //document.getElementById("demo").innerHTML = "Width out: " + window.innerWidth + "<br>Height out: " + window.innerHeight;
+        function myFunction1() {
+          var w = window.innerWidth;
+          var h = window.innerHeight;
+          document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+        }
+		
+			
+		
+(function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+	 
+	  if ($(window).width() > mediasize) {
+       cssmenu.find('div').removeClass('menu-opened');
+     }
+	 
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+
+    </script>
+
+   
+  <header>
+<div class="container"> 
+<nav id='cssmenu' style="margin-left: -23px">
+<div class="logo">
+<div class="float-left">
+
+               <a class="navbar-brand"><img class="mainlogo" src="./images/fed1.png"></a>
+<div class="sepdv" id="seperator"> 
+			 </div>
+            </div>
+</div>
+<div id="head-mobile"></div>
+<div class="button"></div>
+
+<ul>
+<li class='active'><a href='./index_v4_10.html'><i class="fa fa-home moveicon" aria-hidden="true" ></i>GSP HOME</a></li>
+
+<li><a href='#'><i  class="fas fa-bars moveicon"></i>Menu</a>
+<ul> 
+
+   <li><a href="./clearance_v4.html"> <i class="fas fa-tags moveicon"></i>Clearance</a></li>
+   <li><a href="./operations_v4.html"><i class="fas fa-tasks moveicon"></i> Operations</a></li>
+   <li><a href="./training_v4.html"> <i class='fas fa-envelope-open-text moveicon'></i>Training</a></li>
+   <li><a href="./marketing_v4.html"><i class="fas fa-bullhorn moveicon"></i> Marketing/sales</a></li>
+   <li> <a href="./customerexp_v4.html"><i class="fas fa-user moveicon"></i>Customer experience</a></li>
+
+ </ul>
+</li>
+<li><a href='#'><i  class="fa fa-link moveicon" aria-hidden="true"></i>Quick Links</a>
+   <ul>
+      <li> <a class="dropdown-item" href="https://www.fedex.com/">
+							<i class="fa fa-paper-plane moveicon" aria-hidden="true"></i>Fedex.com</a>
+         
+      </li>
+      <li> <a class="dropdown-item" href="./tnt_v4.html">
+							<i class="fas fa-map moveicon"></i>TNT</a>
+         
+      </li>
+	  
+	  <li><a class="dropdown-item" href="./staff_v4.html">
+							<i class="fas fa-users moveicon"></i>Staff</a>
+         
+      </li>
+	  
+	  <li><a class="dropdown-item" href="./regalerts_v4.html">
+							<i class="fas fa-exclamation-triangle moveicon"></i>Reg alerts	</a>
+         
+      </li>
+	   <li><a href='#'><i class="fa fa-sitemap" aria-hidden="true"></i> Region</a>
+         <ul>
+            <li><a class="dropdown-item" href="./apac_v4.html">
+							<i class="fas fa-bullhorn moveicon" aria-hidden="true"></i>APAC</a></li>
+            <li><a class="dropdown-item" href="./meisa_v4.html">
+							<i class="fa fa-life-ring moveicon" aria-hidden="true"></i>MEISA</a></li>
+			 <li><a class="dropdown-item" href="./europe_v4.html">
+							<i class="fas fa-atlas moveicon"></i>Europe</a></li>
+            <li><a class="dropdown-item" href="./lac_v4.html">
+							<i class="fa fa-window-restore moveicon" aria-hidden="true"></i>LAC</a></li>
+         </ul>
+      </li>
+  </ul>
+</li>
+
+<li>
+<form class="form-inline" id="empsearchform" action="http://hr-directory.prod.fedex.com/peopledirectory" method="get">
+       <div class="input-group" style="width:100% !important;right: -50px;padding-left: 2rem;">
+	     
+		  <input type="hidden" name="gobutton" value="go">
+						 <input type="hidden" name="button" value="search">
+						 <input type="hidden" name="keyfield" value="name">
+
+           <input type="text" style="height: 28px;border-radius: 2px;" id="empsearch" class="form-control" placeholder="Employee lookup" name="search" >
+            <div class="input-group-btn">
+                <button class="btn btn-default" style="line-height: 1;" type="submit">
+				<i class="glyphicon glyphicon-search"></i></button>
+            </div>
+		
+
+        </div>
+	</form>
+
+</li>
+
+</ul>
+
+
+
+
+</nav>
+
+</div>
+
+
+</header>
+  <main style=" height: auto;" onmouseover="mouseonbody()"> 
+  
+   <div class="row"> 
+		    <div class="container" style="padding-left:0px !important;padding-right:0px;">
+  
+        <h3> Customer Experience </h3>
+		
+		
+			<img src="./images/New2.jpg" class="pageimges" >
+		
+		<span><p class="allpagetxt"> In a highly competitive market place, providing a world leading customer experience is the goal. As a GSP locally differentiating yourselves through a consistent experience, focused on quality and providing for the needs of Customers will distinguish service and lead to Happy Customers. The support in terms of guidance and awareness tools that develop this understanding of service can be found here in GlobaLink .
+       </p> </span>
+	   
+	    <ul style="line-height: 2.5">
+				    <li> <a href="" > CIAO</a></li>
+					<li> <a href="" > C4 Clearance Desktop</a></li>
+					<li> <a href="" > FBC IB</a></li>
+					<li> <a href="" > FGC</a></li>
+					<li> <a href="" >FLIGHT SEARCH</a></li>
+					
+					
+				 </ul>
+  </main>
+  
+    
+          </div>
+				  </div>
+				  
+ 
+
+  <!-- Footer -->
+    <footer class="page-footer font-small indigo mt-4 footer1" >
+	<div class="container">
+	 <div class="row" >
+		<div style="padding-top:1rem;width: 100%"> 
+		
+		     <div class="c-uhff-nav-group col-md-2"> <a href="./index_v4_10.html"><h4 style="color:#616161;font-weight: 700;margin-top: 2px;
+    margin-bottom: 0px;"> GSP home </h4></a>
+	 <ul class="ulnone footermenuhight"> 
+			    <li><a class="footerlink" href="https://about.van.fedex/">About Company</a> </li>
+				 <li> <a  class="footerlink" href="https://about.van.fedex/our-story/company-structure"> Our Portfolio </a> </li>
+				 </ul>
+	</div>
+	
+		<div class="c-uhff-nav-group col-md-3"> <h4 style="color:#616161;font-weight: 700;margin-top: 2px;
+    margin-bottom: 0px;"> Menu </h4> 
+		     <ul class="ulnone footermenuhight"> 
+			    <li><a class="footerlink" href="./clearance_v4.html">Clearance</a> </li>
+				 <li> <a  class="footerlink" href="./operations_v4.html"> Operations </a> </li>
+				  <li> <a class="footerlink" href="./training_v4.html">Training</a> </li>
+				   <li><a class="footerlink" href="./marketing_v4.html">Marketing/Sales</a> </li>
+				    <li><a class="footerlink" href="./customerexp_v4.html">Customer Experience </a></li>
+			</ul>
+		</div>
+		
+		
+		 <div class="c-uhff-nav-group col-md-3"> <h4 style="color:#616161;font-weight: 600;margin-top: 0px;
+    margin-bottom: 0px;"> Quick links </h4>
+ <ul class="ulnone footermenuhight"> 
+			    <li><a class="footerlink" href="https://www.fedex.com/">FedEx.com </a></li>
+				 <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/tnt.aspx">TNT </a></li>
+				  <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/staff.aspx">Staff </a></li>
+				   <li><a class="footerlink" href="https://sp.web.fedex.com/sites/GlobaLink/SitePages/regalerts.aspx">REG alerts </a></li>
+				   <li><a class="footerlink" href="./apac_v4.html">APAC </a></li>
+					<li><a class="footerlink" href="./meisa_v4.html">MEISA </a></li>
+				    <li><a class="footerlink" href="./europe_v4.html">Europe</a> </li>
+				    <li><a class="footerlink" href="./lac_v4.html"></a>LAC </li>
+			</ul>
+		 </div>
+		 
+		 	    <div class="c-uhff-nav-group col-md-4"> 
+			<div class="row" style="float:right">
+			<div> 
+			<span> Follow us </span>
+			</div>
+			<div>
+			 <a class="footerlink" href="https://www.fedex.com/us/email">
+			<i class="fa fa-envelope fxg_social_icons"  aria-hidden="true"></i></div>
+			
+			<div>
+			<a class="footerlink" href="https://www.facebook.com/fedex">
+			<i class="fab fa-facebook-f fxg_social_icons" style="color:#3b579d"></i> </a></div>
+			<div> 
+			<a class="footerlink" href="https://www.twitter.com/fedex">
+			<i class="fa fa-twitter fxg_social_icons" aria-hidden="true" style="color:#28a9e0"></i></a></div>
+			<div>
+			<a class="footerlink" href="https://www.instagram.com/fedex">
+			<i class="fab fa-instagram fxg_social_icons" style="color:#e3235f"></i></a></div>
+			<div>
+			<a class="footerlink" href="https://www.linkedin.com/company/fedex">
+			<i class="fab fa-linkedin-in fxg_social_icons" aria-hidden="true" style="color:#3b579d"></i></a></div>
+			 </div>
+	</div>
+		 
+		</div>
+		</div>
+		</div>
+<div class="container">
+        <div class="row">
+		   <div class="col-sm-4">
+				<div style="font-color:white !important;" class="c-uhff-base">© FedEx
+				<a> 1995-2019</a>
+				</div>
+		
+		   </div>
+		   <div class="col-sm-8" > 
+					<div class="row" style="float:right">
+					<div><a href="https://www.fedex.com/us/customersupport/email/index.html">Feedback</a>
+					<span class="fxg_seperator"> | </span>
+					</div>	
+					<div><a href="https://www.fedex.com/us/sitemap.html">Sitemap<a>
+					<span class="fxg_seperator"> | </span>
+					</div>	
+					<div><a href="https://www.fedex.com/en-us/terms-of-use.html">Terms of Use<a>
+					<span class="fxg_seperator"> | </span>
+					</div>	
+					<div><a href="https://www.fedex.com/en-us/trust-center.html">Privacy & Security <a>
+					
+					</div>	
+					
+				</div>
+		   </div>
+      
+		   
+        </div>
+</div>
+    </footer>
+  <!-- Footer -->
+
+</body>
+
+</html>
